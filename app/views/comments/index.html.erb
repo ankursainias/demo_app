@@ -1,0 +1,17 @@
+<%= link_to 'Back To Posts', posts_path %>
+<%= form_with(model: [:post, @comment], local: false) do |f| %>
+  <%= f.label :message %>
+  <%= f.text_area :message, required: true %>
+  <%= f.submit "Add Comment", disable_with: 'adding...' %>
+<% end %>
+
+<% if @comments.any? %>
+
+  <% @comments.each do |comment| %>
+    <p><%= time_ago_in_words(comment.created_at ) %> - <b><%= comment.message %></b></p>
+  <% end %>
+
+  <%= will_paginate @comments %>
+<% else %>
+  <p> No Comment Yet </p>
+<% end %>

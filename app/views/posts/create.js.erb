@@ -1,0 +1,6 @@
+<% if @post.errors.any? %>
+document.getElementById("post-form").innerHTML = "<%= j render(partial: 'form', locals: { post: @post }) %>"
+<% else %>
+alert('post saved successfully')
+document.getElementById("post-form").innerHTML = "<%= j render(partial: 'form', locals: { post: (post = Post.new) && post.build_image && post}) %>"
+<% end %>
