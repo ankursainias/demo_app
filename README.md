@@ -9,10 +9,16 @@ Things you may want to cover:
 
 - Application Name - demo_app
 
+- Live Demo URL - https://free-demo-app.herokuapp.com/
+
 - Ruby version 3.0.2
 
 - Rails version 6.1.4
 
 - Database - Postgres
+
+- Setup Database - rails db:setup
+
+- To Run local server - rails server
 
 To Run Unit Test Cases -> bundle exec rspec
