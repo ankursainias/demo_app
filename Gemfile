@@ -41,6 +41,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing'
+  gem 'rspec-activemodel-mocks'
   gem 'simplecov', require: false
 end
 

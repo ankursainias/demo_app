@@ -7,7 +7,7 @@ RSpec.feature 'Post management', type: :feature do
     expect(page).to have_text('New Post')
   end
 
-  scenario 'Visit post list' do
+  scenario 'Visit posts list page' do
     visit '/posts'
     expect(page).to have_text('Show')
     expect(page).to have_text('Edit')
