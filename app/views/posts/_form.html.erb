@@ -19,22 +19,22 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :contact_details %>
-    <%= f.text_field :contact_details %>
+    <%= f.text_field :contact_details, required: true %>
   </div>
   <%= f.fields_for :image do |ff| %>
    <%= render "image_fields", f: ff %>
